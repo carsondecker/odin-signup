@@ -134,6 +134,15 @@ input:focus {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
 }
 
+input.invalid-password {
+    border: 1px solid red;
+}
+
+#password-error.invalid-password::after {
+    content: "* Passwords do not match";
+    color: red;
+}
+
 button {
     margin-left: 50px;
     padding: 15px 50px;
@@ -143,6 +152,10 @@ button {
     color: white;
     font-weight: bold;
     margin-bottom: 30px;
+}
+
+button:active {
+    background-color: #3E4D32;
 }
 
 .login-prompt {

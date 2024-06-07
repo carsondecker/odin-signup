@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="validation.js"></script>
 </head>
 <body>
     <div class="img-sidebar">
@@ -15,7 +16,7 @@
         <div class="credits">Photo by <a href="https://unsplash.com/@haliewestphoto" class="credit">Halie West</a> on <a href="https://unsplash.com" class="credit">Unsplash</a></div>
     </div>
     <div class="main-container">
-        <form action="">
+        <form action="#">
             <div class="form-header">
                 <div class="form-desc">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</div>
                 <div class="form-desc">You <em>know</em> you want to.</div>
@@ -46,17 +47,18 @@
                     <div class="password">
                         <div class="form-item">
                             <label for="user_password">PASSWORD</label>
-                            <input type="password" id="user_password" name="user_password" required>
+                            <input type="password" id="user_password" name="user_password" onkeyup="check_password()" required>
+                            <span id="password-error"></span>
                         </div>
                         <div class="form-item">
                             <label for="confirm_password">CONFIRM PASSWORD</label>
-                            <input type="password" id="confirm_password" name="confirm_password" required>
+                            <input type="password" id="confirm_password" name="confirm_password" onkeyup="check_password()" required>
                         </div>
                     </div>
                 </fieldset>
             </div>
             <div class="footer">
-                <button type="submit">Create Account</button>
+                <button type="submit" id="submit-button">Create Account</button>
                 <div class="login-prompt">Already have an account? <a href="#" class="login-link">Log in</a></div>
             </div>
         </form>
