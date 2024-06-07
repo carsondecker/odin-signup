@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'NorseBold';
-    src: url(../assets/Norse-Bold.otf) format('opentype');
+    src: url("assets/Norse-Bold.otf") format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -25,7 +25,7 @@ body {
 
 .img-sidebar {
     width: 33%;
-    background: url("../assets/sidebar-bg.avif");
+    background: url("assets/sidebar-bg.avif");
     background-size: cover;
     display: flex;
     flex-direction: column;
